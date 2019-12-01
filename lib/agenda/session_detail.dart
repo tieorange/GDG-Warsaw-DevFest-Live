@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/home/session.dart';
-import 'package:flutter_devfest/home/speaker.dart';
+import 'package:flutter_devfest/data/session.dart';
+import 'package:flutter_devfest/data/speaker.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -108,8 +108,7 @@ class SessionDetail extends StatelessWidget {
               Text(
                 session.sessionDesc,
                 textAlign: TextAlign.center,
-                style:
-                    Theme.of(context).textTheme.caption.copyWith(fontSize: 13),
+                style: Theme.of(context).textTheme.caption.copyWith(fontSize: 13),
               ),
               SizedBox(
                 height: 20,

@@ -1,3 +1,6 @@
+import 'package:flutter_devfest/data/sessionize/sessions.dart';
+import 'package:flutter_devfest/data/sessionize/sessions_json.dart';
+
 class SessionsData {
   List<Session> sessions;
 
@@ -51,6 +54,16 @@ class Session {
     this.speakerId,
     this.track,
   });
+
+  static void getData() {
+    try {
+      List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
+      sessions.forEach((value) => print(value.toString()));
+    } catch (e) {
+      print("\n\n\n\n Error: $e");
+    }
+    print("finished");
+  }
 
   Session.fromJson(Map<String, dynamic> json) {
     sessionId = json['session_id'];

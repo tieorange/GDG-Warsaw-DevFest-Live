@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_devfest/data/session.dart';
 import 'package:flutter_devfest/dialogs/error_dialog.dart';
 import 'package:flutter_devfest/home/home_widgets/home_front.dart';
 import 'package:flutter_devfest/home/index.dart';
@@ -31,6 +32,7 @@ class HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     this._homeBloc.dispatch(LoadHomeEvent());
+    Session.getData();
   }
 
   @override

@@ -4,9 +4,9 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_devfest/home/home_provider.dart';
-import 'package:flutter_devfest/home/session.dart';
-import 'package:flutter_devfest/home/speaker.dart';
-import 'package:flutter_devfest/home/team.dart';
+import 'package:flutter_devfest/data/session.dart';
+import 'package:flutter_devfest/data/speaker.dart';
+import 'package:flutter_devfest/data/team.dart';
 import 'package:flutter_devfest/utils/dependency_injection.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 
@@ -14,8 +14,7 @@ import 'index.dart';
 
 class MockClient implements IClient {
   @override
-  Future<MappedNetworkServiceResponse<T>> getAsync<T>(String resourcePath,
-      {bool customHeaders}) async {
+  Future<MappedNetworkServiceResponse<T>> getAsync<T>(String resourcePath, {bool customHeaders}) async {
     var resultClass;
     String rawString;
 
@@ -50,14 +49,11 @@ class MockClient implements IClient {
     }
 
     return MappedNetworkServiceResponse<T>(
-        mappedResult: resultClass,
-        networkServiceResponse: NetworkServiceResponse<T>(success: true));
+        mappedResult: resultClass, networkServiceResponse: NetworkServiceResponse<T>(success: true));
   }
 
   @override
-  Future<MappedNetworkServiceResponse<T>> postAsync<T>(
-      String resourcePath, data,
-      {bool customHeaders = false}) {
+  Future<MappedNetworkServiceResponse<T>> postAsync<T>(String resourcePath, data, {bool customHeaders = false}) {
     return null;
   }
 
