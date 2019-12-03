@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class SpeakersWarsaw {
-  final List<Speaker> speakers;
+  final List<SpeakerWarsaw> speakers;
 
   SpeakersWarsaw({
     this.speakers,
@@ -12,7 +12,7 @@ class SpeakersWarsaw {
   String toJson() => json.encode(toMap());
 
   factory SpeakersWarsaw.fromMap(Map<String, dynamic> json) => SpeakersWarsaw(
-        speakers: List<Speaker>.from(json["speakers"].map((x) => Speaker.fromMap(x))),
+        speakers: List<SpeakerWarsaw>.from(json["speakers"].map((x) => SpeakerWarsaw.fromMap(x))),
       );
 
   Map<String, dynamic> toMap() => {
@@ -20,7 +20,7 @@ class SpeakersWarsaw {
       };
 }
 
-class Speaker {
+class SpeakerWarsaw {
   final String id;
   final String firstName;
   final String lastName;
@@ -28,13 +28,13 @@ class Speaker {
   final String bio;
   final String tagLine;
   final String profilePicture;
-  final List<Session> sessions;
+  final List<SessionWarsaw> sessions;
   final bool isTopSpeaker;
   final List<dynamic> links;
   final List<dynamic> questionAnswers;
   final List<dynamic> categories;
 
-  Speaker({
+  SpeakerWarsaw({
     this.id,
     this.firstName,
     this.lastName,
@@ -49,11 +49,11 @@ class Speaker {
     this.categories,
   });
 
-  factory Speaker.fromJson(String str) => Speaker.fromMap(json.decode(str));
+  factory SpeakerWarsaw.fromJson(String str) => SpeakerWarsaw.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
 
-  factory Speaker.fromMap(Map<String, dynamic> json) => Speaker(
+  factory SpeakerWarsaw.fromMap(Map<String, dynamic> json) => SpeakerWarsaw(
         id: json["id"],
         firstName: json["firstName"],
         lastName: json["lastName"],
@@ -61,7 +61,7 @@ class Speaker {
         bio: json["bio"],
         tagLine: json["tagLine"],
         profilePicture: json["profilePicture"] == null ? null : json["profilePicture"],
-        sessions: List<Session>.from(json["sessions"].map((x) => Session.fromMap(x))),
+        sessions: List<SessionWarsaw>.from(json["sessions"].map((x) => SessionWarsaw.fromMap(x))),
         isTopSpeaker: json["isTopSpeaker"],
         links: List<dynamic>.from(json["links"].map((x) => x)),
         questionAnswers: List<dynamic>.from(json["questionAnswers"].map((x) => x)),
@@ -84,20 +84,20 @@ class Speaker {
       };
 }
 
-class Session {
+class SessionWarsaw {
   final int id;
   final String name;
 
-  Session({
+  SessionWarsaw({
     this.id,
     this.name,
   });
 
-  factory Session.fromJson(String str) => Session.fromMap(json.decode(str));
+  factory SessionWarsaw.fromJson(String str) => SessionWarsaw.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
 
-  factory Session.fromMap(Map<String, dynamic> json) => Session(
+  factory SessionWarsaw.fromMap(Map<String, dynamic> json) => SessionWarsaw(
         id: json["id"],
         name: json["name"],
       );

@@ -1,3 +1,6 @@
+import 'package:flutter_devfest/data/sessionize/speakers.dart';
+import 'package:flutter_devfest/data/sessionize/speakers_json.dart';
+
 class SpeakersData {
   List<Speaker> speakers;
 
@@ -20,8 +23,18 @@ class SpeakersData {
     return data;
   }
 
-  static void getData(){
-    Speaks
+  static List<Speaker> getData() {
+    var speakers = SpeakersWarsaw.fromMap(speakersList).speakers;
+    return speakers
+        .map((value) => Speaker(
+              speakerName: value.fullName,
+              speakerDesc: value.bio,
+              speakerImage: value.profilePicture,
+              speakerInfo: value.tagLine,
+              sessionId: value.sessions.first.id.toString(),
+              speakerSession: value.sessions.first.name,
+            ))
+        .toList();
   }
 }
 

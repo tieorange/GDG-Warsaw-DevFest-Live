@@ -76,37 +76,23 @@ class Team {
 
 List<Team> teams = [
   Team(
-    name: "Sundar Pichai",
+    name: "Andrii Kovalchuk",
     desc: "Organizer",
-    contribution: "Google CEO",
-    image:
-        "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/andrii_kovalchuk.jpg",
   ),
   Team(
-    name: "Vrijraj",
-    desc: "Co-Organizer",
-    contribution: "Logistics and travels",
-    image: "https://avatars2.githubusercontent.com/u/10599101?s=460&v=4",
-  ),
-  Team(
-    name: "Larry Page",
-    desc: "Co-Organizer",
-    contribution: "Founder",
-    image:
-        "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5c76bcaaa7ea43100043c836%2F400x400.jpg%3Ffit%3Dscale%26background%3D000000",
-  ),
-  Team(
-    name: "Pawan Kumar",
-    desc: "Co-Organizer",
-    contribution: "Developed the app",
-    image:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
-  ),
-  Team(
-    name: "Pawan Kumar",
+    name: "Andrzej Torski",
     desc: "Organizer",
-    contribution: "Developed the app",
+    contribution: "",
     image:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
+        "https://sessionize.com/image?f=c92dc59d5b94b34f8b522b00b0162b6a,200,200,1,0,fd-bf5d-4c9f-ac70-8ec69cd01f2f.c29f71c9-7515-4740-b996-469de04993b7.jpg",
+  ),
+  Team(
+    name: "Jakub Kołakowski",
+    desc: "Organizer",
+    contribution: "",
+    image:
+        "https://sessionize.com/image?f=fd7fb61129159de72ae7d33db736cf36,200,200,1,0,a7-65c7-43df-980d-66c706003085.66aa425a-a408-4c51-857f-52717b03397f.jpg",
   ),
 ];

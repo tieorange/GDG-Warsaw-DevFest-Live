@@ -124,7 +124,6 @@ class TeamPage extends StatelessWidget {
                             teams[i].contribution,
                             style: Theme.of(context).textTheme.caption,
                           ),
-                          socialActions(context),
                         ],
                       ),
                     )

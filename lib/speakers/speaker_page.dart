@@ -80,7 +80,7 @@ class SpeakerPage extends StatelessWidget {
                       ),
                       child: CachedNetworkImage(
                         fit: BoxFit.cover,
-                        imageUrl: speakers[i].speakerImage,
+                        imageUrl: speakers[i].speakerImage ?? "",
                       ),
                     ),
                     SizedBox(

@@ -30,36 +30,17 @@ class HomeProvider implements IHomeProvider {
 
   @override
   Future<SpeakersData> getSpeakers() async {
-    var result = await _client.getAsync(kConstGetSpeakersUrl);
-    if (result.networkServiceResponse.success) {
-      SpeakersData res = SpeakersData.fromJson(result.mappedResult);
-      return res;
-    }
-
-    throw Exception(result.networkServiceResponse.message);
+    return SpeakersData(speakers: SpeakersData.getData());
   }
 
   @override
   Future<SessionsData> getSessions() async {
-    var result = await _client.getAsync(kConstGetSessionsUrl);
-    if (result.networkServiceResponse.success) {
-      SessionsData res = SessionsData.fromJson(result.mappedResult);
-      return res;
-    }
-
     return SessionsData(sessions: Session.getData());
-
-    throw Exception(result.networkServiceResponse.message);
   }
 
   @override
   Future<TeamsData> getTeams() async {
-    var result = await _client.getAsync(kConstGetTeamsUrl);
-    if (result.networkServiceResponse.success) {
-      TeamsData res = TeamsData.fromJson(result.mappedResult);
-      return res;
-    }
-
-    throw Exception(result.networkServiceResponse.message);
+    TeamsData res = TeamsData(teams: teams);
+    return res;
   }
 }
