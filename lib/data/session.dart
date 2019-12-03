@@ -58,7 +58,14 @@ class Session {
   static void getData() {
     try {
       List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
-      sessions.forEach((value) => print(value.toString()));
+      sessions.forEach((value) {
+        Session(
+          sessionId: value.id,
+          sessionTitle: value.title,
+          sessionDesc: value.description,
+        );
+        print(value.toString());
+      });
     } catch (e) {
       print("\n\n\n\n Error: $e");
     }
