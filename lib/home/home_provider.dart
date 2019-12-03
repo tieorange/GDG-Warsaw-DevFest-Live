@@ -35,7 +35,7 @@ class HomeProvider implements IHomeProvider {
 
   @override
   Future<SessionsData> getSessions() async {
-    return SessionsData(sessions: Session.getData());
+    return SessionsData(sessions: Session.getData().toList());
   }
 
   @override

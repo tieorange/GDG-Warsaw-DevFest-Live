@@ -28,7 +28,7 @@ class SpeakerWarsaw {
   final String bio;
   final String tagLine;
   final String profilePicture;
-  final List<SessionWarsaw> sessions;
+  final List<SessionWarsawSpeaker> sessions;
   final bool isTopSpeaker;
   final List<dynamic> links;
   final List<dynamic> questionAnswers;
@@ -61,7 +61,7 @@ class SpeakerWarsaw {
         bio: json["bio"],
         tagLine: json["tagLine"],
         profilePicture: json["profilePicture"] == null ? null : json["profilePicture"],
-        sessions: List<SessionWarsaw>.from(json["sessions"].map((x) => SessionWarsaw.fromMap(x))),
+        sessions: List<SessionWarsawSpeaker>.from(json["sessions"].map((x) => SessionWarsawSpeaker.fromMap(x))),
         isTopSpeaker: json["isTopSpeaker"],
         links: List<dynamic>.from(json["links"].map((x) => x)),
         questionAnswers: List<dynamic>.from(json["questionAnswers"].map((x) => x)),
@@ -84,20 +84,20 @@ class SpeakerWarsaw {
       };
 }
 
-class SessionWarsaw {
+class SessionWarsawSpeaker {
   final int id;
   final String name;
 
-  SessionWarsaw({
+  SessionWarsawSpeaker({
     this.id,
     this.name,
   });
 
-  factory SessionWarsaw.fromJson(String str) => SessionWarsaw.fromMap(json.decode(str));
+  factory SessionWarsawSpeaker.fromJson(String str) => SessionWarsawSpeaker.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
 
-  factory SessionWarsaw.fromMap(Map<String, dynamic> json) => SessionWarsaw(
+  factory SessionWarsawSpeaker.fromMap(Map<String, dynamic> json) => SessionWarsawSpeaker(
         id: json["id"],
         name: json["name"],
       );
