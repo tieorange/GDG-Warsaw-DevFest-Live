@@ -19,6 +19,10 @@ class SpeakersData {
     }
     return data;
   }
+
+  static void getData(){
+    Speaks
+  }
 }
 
 class Speaker {

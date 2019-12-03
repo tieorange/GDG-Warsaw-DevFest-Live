@@ -7,7 +7,9 @@ import 'package:flutter_devfest/utils/devfest.dart';
 
 abstract class IHomeProvider {
   Future<SpeakersData> getSpeakers();
+
   Future<SessionsData> getSessions();
+
   Future<TeamsData> getTeams();
 }
 
@@ -44,6 +46,8 @@ class HomeProvider implements IHomeProvider {
       SessionsData res = SessionsData.fromJson(result.mappedResult);
       return res;
     }
+
+    return SessionsData(sessions: Session.getData());
 
     throw Exception(result.networkServiceResponse.message);
   }

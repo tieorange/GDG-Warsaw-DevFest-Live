@@ -55,21 +55,20 @@ class Session {
     this.track,
   });
 
-  static void getData() {
+  static List<Session> getData() {
     try {
       List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
-      sessions.forEach((value) {
-        Session(
-          sessionId: value.id,
-          sessionTitle: value.title,
-          sessionDesc: value.description,
-        );
-        print(value.toString());
-      });
+      return sessions.map((value) => Session(
+            sessionId: value.id,
+            sessionTitle: value.title,
+            sessionDesc: value.description,
+          ));
     } catch (e) {
       print("\n\n\n\n Error: $e");
     }
     print("finished");
+
+    return List();
   }
 
   Session.fromJson(Map<String, dynamic> json) {
