@@ -1,5 +1,6 @@
 import 'package:flutter_devfest/data/sessionize/sessions.dart';
 import 'package:flutter_devfest/data/sessionize/sessions_json.dart';
+import 'package:flutter_devfest/data/speaker.dart';
 
 class SessionsData {
   List<Session> sessions;
@@ -56,6 +57,8 @@ class Session {
   });
 
   static List<Session> getData() {
+    var speakersData = SpeakersData(speakers: SpeakersData.getData());
+
     try {
       List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
       List<Session> mappedSessions = sessions
@@ -64,13 +67,13 @@ class Session {
                 sessionTitle: value.title,
                 sessionDesc: value.description,
                 track: value.room,
-                speakerImage:
-                    "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
                 sessionStartTime: "${value.startsAt.hour}:${value.startsAt.minute}",
+                sessionTotalTime: (value.startsAt.difference(value.endsAt).toString()),
+                speakerImage: findSpeakerById(value.speakers, speakersData).speakerImage ?? "",
                 speakerId: value.speakers.first.id ?? "1",
                 speakerName: value.speakers.first.name ?? "",
-                sessionTotalTime: (value.startsAt.difference(value.endsAt).toString()),
-                speakerDesc: "",
+                speakerDesc: findSpeakerById(value.speakers, speakersData).speakerDesc ?? "",
+                speakerInfo: findSpeakerById(value.speakers, speakersData).speakerInfo ?? "",
               ))
           .toList();
       return mappedSessions;
@@ -78,6 +81,11 @@ class Session {
       print(e);
       throw e;
     }
+  }
+
+  static Speaker findSpeakerById(List<SpeakerInSessionWarsaw> speakers, SpeakersData data) {
+    String id = speakers.first.id;
+    return data.speakers.firstWhere((value) => value.speakerId == id);
   }
 
   Session.fromJson(Map<String, dynamic> json) {

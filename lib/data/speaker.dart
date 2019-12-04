@@ -24,24 +24,13 @@ class SpeakersData {
   }
 
   static List<Speaker> getData() {
-//    var speakersWarsaw = SpeakersWarsaw.fromMap(speakersList).speakers;
-    List<Speaker> speakers = List();
+    List<SpeakerWarsaw> speakersWarsaw = SpeakersWarsaw.fromMap(speakersList).speakers;
 
-    /*speakersWarsaw.forEach((value) {
-      speakers.add(Speaker(
-        speakerName: value.fullName,
-        speakerDesc: value.bio,
-        speakerImage: value.profilePicture,
-        speakerInfo: value.tagLine,
-        sessionId: value.sessions.first.id.toString(),
-        speakerSession: value.sessions.first.name,
-      ));
-    });
-*/
-    return speakers;
-
-    /*
-    return speakers
+//
+//
+//
+//
+    return speakersWarsaw
         .map((value) => Speaker(
               speakerName: value.fullName,
               speakerDesc: value.bio,
@@ -50,7 +39,7 @@ class SpeakersData {
               sessionId: value.sessions.first.id.toString(),
               speakerSession: value.sessions.first.name,
             ))
-        .toList();*/
+        .toList();
   }
 }
 
