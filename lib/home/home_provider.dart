@@ -4,6 +4,7 @@ import 'package:flutter_devfest/data/team.dart';
 import 'package:flutter_devfest/network/i_client.dart';
 import 'package:flutter_devfest/utils/dependency_injection.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
+import 'package:stack_trace/stack_trace.dart';
 
 abstract class IHomeProvider {
   Future<SpeakersData> getSpeakers();
@@ -35,7 +36,16 @@ class HomeProvider implements IHomeProvider {
 
   @override
   Future<SessionsData> getSessions() async {
-    return SessionsData(sessions: Session.getData().toList());
+    var result = await _client.getAsync(kConstGetSessionsUrl);
+    if (result.networkServiceResponse.success) {
+      SessionsData res = SessionsData.fromJson(result.mappedResult);
+//      return res;
+      return SessionsData(sessions: Session.getData());
+    }
+
+    return SessionsData(sessions: Session.getData());
+
+    throw Exception(result.networkServiceResponse.message);
   }
 
   @override

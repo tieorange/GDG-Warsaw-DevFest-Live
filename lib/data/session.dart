@@ -56,16 +56,28 @@ class Session {
   });
 
   static List<Session> getData() {
-    List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
-    List<Session> mappedSessions = sessions
-        .map((value) => Session(
-              sessionId: value.id,
-              sessionTitle: value.title,
-              sessionDesc: value.description,
-            ))
-        .toList();
-
-    return mappedSessions;
+    try {
+      List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
+      List<Session> mappedSessions = sessions
+          .map((value) => Session(
+                sessionId: value.id,
+                sessionTitle: value.title,
+                sessionDesc: value.description,
+                track: value.room,
+                speakerImage:
+                    "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
+                sessionStartTime: "${value.startsAt.hour}:${value.startsAt.minute}",
+                speakerId: value.speakers.first.id ?? "1",
+                speakerName: value.speakers.first.name ?? "",
+                sessionTotalTime: (value.startsAt.difference(value.endsAt).toString()),
+                speakerDesc: "",
+              ))
+          .toList();
+      return mappedSessions;
+    } catch (e) {
+      print(e);
+      throw e;
+    }
   }
 
   Session.fromJson(Map<String, dynamic> json) {
