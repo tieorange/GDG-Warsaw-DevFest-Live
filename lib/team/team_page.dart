@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/data/speaker.dart';
+import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -56,6 +56,7 @@ class TeamPage extends StatelessWidget {
           ],
         ),
       );
+
   @override
   Widget build(BuildContext context) {
     var _homeBloc = HomeBloc();
@@ -114,7 +115,7 @@ class TeamPage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            teams[i].desc,
+                            "" /*teams[i].desc*/,
                             style: Theme.of(context).textTheme.subtitle,
                           ),
                           SizedBox(

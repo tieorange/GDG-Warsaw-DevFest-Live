@@ -1358,7 +1358,7 @@ final sessionsList = {
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        {"id": "1ac80afd-bf5d-4c9f-ac70-8ec69cd01f2f", "name": "Andrii Kovalchuk"},
+        {"id": "1ac80afd-bf5d-4c9f-ac70-8ec69cd01f2f", "name": "Andrii Kovalchuk, Andrzej Torski"},
         {"id": "1c7c1fc2-af34-4dff-ae81-167ff6978487", "name": "Andrzej Torski"}
       ],
       "categories": [

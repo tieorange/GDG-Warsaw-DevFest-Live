@@ -89,10 +89,45 @@ List<Team> teams = [
         "https://sessionize.com/image?f=c92dc59d5b94b34f8b522b00b0162b6a,200,200,1,0,fd-bf5d-4c9f-ac70-8ec69cd01f2f.c29f71c9-7515-4740-b996-469de04993b7.jpg",
   ),
   Team(
-    name: "Jakub Kołakowski",
+    name: "Aleksandra Woźniak",
     desc: "Organizer",
     contribution: "",
-    image:
-        "https://sessionize.com/image?f=fd7fb61129159de72ae7d33db736cf36,200,200,1,0,a7-65c7-43df-980d-66c706003085.66aa425a-a408-4c51-857f-52717b03397f.jpg",
+    image: "https://warrad.devfest.pl/img/person/aleksandra_wozniak.jpg",
   ),
+  Team(
+    name: "Ania Jezierska",
+    desc: "Organizer",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/ania_jezierska.jpg",
+  ),
+  Team(
+    name: "Eli Halych",
+    desc: "Organizer",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/eli_halych.jpg",
+  ),
+  Team(
+    name: "Kamila Ratajczak",
+    desc: "Organizer",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/kamila_ratajczak.png",
+  ),
+  Team(
+    name: "Maciej Sawicki",
+    desc: "Organizer",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/maciej_sawicki.jpg",
+  ),
+  Team(
+    name: "Piotr Trębacz",
+    desc: "Organizer",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/piotr_trebacz.jpg",
+  ),
+  Team(
+    name: "Sebastian Denis",
+    desc: "Organizer",
+    contribution: "",
+    image: "https://warrad.devfest.pl/img/person/sebastian_denis.jpg",
+  )
 ];
