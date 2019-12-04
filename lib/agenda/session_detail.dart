@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/data/session.dart';
 import 'package:flutter_devfest/data/speaker.dart';
@@ -69,25 +68,11 @@ class SessionDetail extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Center(
-                child: Hero(
-                  tag: session.speakerImage,
-                  child: CircleAvatar(
-                    radius: 100.0,
-                    backgroundImage: CachedNetworkImageProvider(
-                      session.speakerImage,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
               Text(
-                "${session.speakerDesc}",
+                "${session.track}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
-                      fontSize: 14,
+                      fontSize: 18,
                       color: Tools.multiColors[Random().nextInt(4)],
                     ),
               ),
@@ -98,7 +83,7 @@ class SessionDetail extends StatelessWidget {
                 "${session.sessionTitle}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
-                      fontSize: 20,
+                      fontSize: 26,
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -108,12 +93,11 @@ class SessionDetail extends StatelessWidget {
               Text(
                 session.sessionDesc,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.caption.copyWith(fontSize: 13),
+                style: Theme.of(context).textTheme.caption.copyWith(fontSize: 18),
               ),
               SizedBox(
                 height: 20,
               ),
-              socialActions(context),
             ],
           ),
         ),

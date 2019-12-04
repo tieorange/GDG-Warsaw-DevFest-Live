@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/session_detail.dart';
 import 'package:flutter_devfest/data/session.dart';
@@ -10,6 +9,7 @@ class SessionList extends StatelessWidget {
   final List<Session> allSessions;
 
   const SessionList({Key key, @required this.allSessions}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -45,13 +45,6 @@ class SessionList extends StatelessWidget {
                         ),
                   ),
                 ],
-              ),
-            ),
-            leading: Hero(
-              tag: allSessions[i].speakerImage,
-              child: CircleAvatar(
-                radius: 30,
-                backgroundImage: CachedNetworkImageProvider(allSessions[i].speakerImage),
               ),
             ),
             title: RichText(

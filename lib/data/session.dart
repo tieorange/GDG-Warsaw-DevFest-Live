@@ -1,3 +1,4 @@
+import 'package:date_format/date_format.dart';
 import 'package:flutter_devfest/data/sessionize/sessions.dart';
 import 'package:flutter_devfest/data/sessionize/sessions_json.dart';
 import 'package:flutter_devfest/data/speaker.dart';
@@ -57,8 +58,6 @@ class Session {
   });
 
   static List<Session> getData() {
-    var speakersData = SpeakersData(speakers: SpeakersData.getData());
-
     try {
       List<SessionWarsaw> sessions = SessionsWarsaw.fromMap(sessionsList).sessions;
       List<Session> mappedSessions = sessions
@@ -67,13 +66,13 @@ class Session {
                 sessionTitle: value.title,
                 sessionDesc: value.description,
                 track: value.room,
-                sessionStartTime: "${value.startsAt.hour}:${value.startsAt.minute}",
-                sessionTotalTime: (value.startsAt.difference(value.endsAt).toString()),
-                speakerImage: findSpeakerById(value.speakers, speakersData).speakerImage ?? "",
+                sessionStartTime: formatDate(value.startsAt, [dd, '.', mm, '\n', HH, ':', nn]),
+                sessionTotalTime: "${value.startsAt.difference(value.endsAt).inMinutes} m.",
+                speakerImage: "",
                 speakerId: value.speakers.first.id ?? "1",
                 speakerName: value.speakers.first.name ?? "",
-                speakerDesc: findSpeakerById(value.speakers, speakersData).speakerDesc ?? "",
-                speakerInfo: findSpeakerById(value.speakers, speakersData).speakerInfo ?? "",
+                speakerDesc: "",
+                speakerInfo: "",
               ))
           .toList();
       return mappedSessions;

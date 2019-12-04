@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
 import 'package:flutter_devfest/config/index.dart';
-import 'package:flutter_devfest/faq/faq_page.dart';
 import 'package:flutter_devfest/map/map_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
-import 'package:flutter_devfest/sponsors/sponsor_page.dart';
 import 'package:flutter_devfest/team/team_page.dart';
 import 'package:flutter_devfest/universal/image_card.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
@@ -53,16 +51,7 @@ class HomeFront extends StatelessWidget {
             shape: StadiumBorder(),
             color: Colors.green,
             colorBrightness: Brightness.dark,
-            onPressed: () =>
-                Navigator.pushNamed(context, SpeakerPage.routeName),
-          ),
-          RaisedButton(
-            child: Text("Sponsors"),
-            shape: StadiumBorder(),
-            color: Colors.orange,
-            colorBrightness: Brightness.dark,
-            onPressed: () =>
-                Navigator.pushNamed(context, SponsorPage.routeName),
+            onPressed: () => Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           RaisedButton(
             child: Text("Team"),
@@ -70,13 +59,6 @@ class HomeFront extends StatelessWidget {
             color: Colors.purple,
             colorBrightness: Brightness.dark,
             onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
-          ),
-          RaisedButton(
-            child: Text("FAQ"),
-            shape: StadiumBorder(),
-            color: Colors.brown,
-            colorBrightness: Brightness.dark,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
           ),
           RaisedButton(
             child: Text("Locate Us"),
@@ -103,8 +85,7 @@ class HomeFront extends StatelessWidget {
             icon: Icons.person,
             color: Colors.green,
             title: Devfest.speakers_text,
-            onPressed: () =>
-                Navigator.pushNamed(context, SpeakerPage.routeName),
+            onPressed: () => Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           ActionCard(
             icon: Icons.people,
@@ -112,19 +93,12 @@ class HomeFront extends StatelessWidget {
             title: Devfest.team_text,
             onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
           ),
-          ActionCard(
+          /*ActionCard(
             icon: Icons.attach_money,
             color: Colors.purple,
             title: Devfest.sponsor_text,
-            onPressed: () =>
-                Navigator.pushNamed(context, SponsorPage.routeName),
-          ),
-          ActionCard(
-            icon: Icons.question_answer,
-            color: Colors.brown,
-            title: Devfest.faq_text,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
-          ),
+            onPressed: () => Navigator.pushNamed(context, SponsorPage.routeName),
+          )*/
           ActionCard(
             icon: Icons.map,
             color: Colors.blue,
@@ -190,9 +164,7 @@ class HomeFront extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ImageCard(
-              img: ConfigBloc().darkModeOn
-                  ? Devfest.banner_dark
-                  : Devfest.banner_light,
+              img: ConfigBloc().darkModeOn ? Devfest.banner_dark : Devfest.banner_light,
             ),
             SizedBox(
               height: 20,
@@ -205,7 +177,6 @@ class HomeFront extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            socialActions(context),
             SizedBox(
               height: 20,
             ),
@@ -226,8 +197,8 @@ class ActionCard extends StatelessWidget {
   final String title;
   final Color color;
 
-  const ActionCard({Key key, this.onPressed, this.icon, this.title, this.color})
-      : super(key: key);
+  const ActionCard({Key key, this.onPressed, this.icon, this.title, this.color}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -237,9 +208,7 @@ class ActionCard extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.1,
         width: MediaQuery.of(context).size.width * 0.2,
         decoration: BoxDecoration(
-          color: ConfigBloc().darkModeOn
-              ? Tools.hexToColor("#1f2124")
-              : Colors.white,
+          color: ConfigBloc().darkModeOn ? Tools.hexToColor("#1f2124") : Colors.white,
           borderRadius: BorderRadius.circular(8),
           boxShadow: !ConfigBloc().darkModeOn
               ? [

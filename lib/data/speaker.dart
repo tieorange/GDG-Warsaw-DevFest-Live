@@ -26,10 +26,6 @@ class SpeakersData {
   static List<Speaker> getData() {
     List<SpeakerWarsaw> speakersWarsaw = SpeakersWarsaw.fromMap(speakersList).speakers;
 
-//
-//
-//
-//
     return speakersWarsaw
         .map((value) => Speaker(
               speakerName: value.fullName,
