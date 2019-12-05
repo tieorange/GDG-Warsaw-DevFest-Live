@@ -67,7 +67,7 @@ class Session {
                 sessionDesc: value.description,
                 track: value.room,
                 sessionStartTime: formatDate(value.startsAt, [dd, '.', mm, '\n', HH, ':', nn]),
-                sessionTotalTime: "${value.startsAt.difference(value.endsAt).inMinutes} m.",
+                sessionTotalTime: "${value.endsAt.difference(value.startsAt).inMinutes} Mins",
                 speakerImage: "",
                 speakerId: value.speakers.first.id ?? "1",
                 speakerName: value.speakers.first.name ?? "",
