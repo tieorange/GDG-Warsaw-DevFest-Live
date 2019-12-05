@@ -72,6 +72,7 @@ class SpeakerPage extends StatelessWidget {
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     ConstrainedBox(
                       constraints: BoxConstraints.expand(
@@ -125,7 +126,6 @@ class SpeakerPage extends StatelessWidget {
                             speakers[i].speakerSession,
                             style: Theme.of(context).textTheme.caption,
                           ),
-                          socialActions(context, speakers[i]),
                         ],
                       ),
                     )

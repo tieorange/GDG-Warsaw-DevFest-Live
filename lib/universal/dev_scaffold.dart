@@ -9,9 +9,8 @@ class DevScaffold extends StatelessWidget {
   final Widget body;
   final Widget tabBar;
 
-  const DevScaffold(
-      {Key key, @required this.body, @required this.title, this.tabBar})
-      : super(key: key);
+  const DevScaffold({Key key, @required this.body, @required this.title, this.tabBar}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -28,19 +27,16 @@ class DevScaffold extends StatelessWidget {
             actions: <Widget>[
               IconButton(
                 icon: Icon(
-                  ConfigBloc().darkModeOn
-                      ? FontAwesomeIcons.lightbulb
-                      : FontAwesomeIcons.solidLightbulb,
+                  ConfigBloc().darkModeOn ? FontAwesomeIcons.lightbulb : FontAwesomeIcons.solidLightbulb,
                   size: 18,
                 ),
                 onPressed: () {
-                  ConfigBloc()
-                      .dispatch(DarkModeEvent(!ConfigBloc().darkModeOn));
+                  ConfigBloc().dispatch(DarkModeEvent(!ConfigBloc().darkModeOn));
                 },
               ),
               IconButton(
                 onPressed: () => Share.share(
-                    "Download the new DevFest App and share with your tech friends.\nPlayStore -  http://bit.ly/2GDr18N"),
+                    "Download the new DevFest App and share with your tech friends.\nPlayStore -  https://play.google.com/store/apps/details?id=com.andrii.kovalchuk.devfest"),
                 icon: Icon(
                   Icons.share,
                   size: 20,

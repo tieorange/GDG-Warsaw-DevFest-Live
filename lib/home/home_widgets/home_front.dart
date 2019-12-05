@@ -72,7 +72,7 @@ class HomeFront extends StatelessWidget {
 
   Widget newActions(context) => Wrap(
         alignment: WrapAlignment.center,
-        spacing: 20.0,
+        spacing: 28.0,
         runSpacing: 20.0,
         children: <Widget>[
           ActionCard(
@@ -161,6 +161,7 @@ class HomeFront extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ImageCard(
@@ -177,11 +178,8 @@ class HomeFront extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            SizedBox(
-              height: 20,
-            ),
             Text(
-              Devfest.app_version,
+              "Made with ❤️ in Flutter",
               style: Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
             )
           ],

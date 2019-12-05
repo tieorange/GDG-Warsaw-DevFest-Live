@@ -171,25 +171,6 @@ final sessionsList = {
     },
     {
       "questionAnswers": [],
-      "id": "163678",
-      "title": "TBA",
-      "description": "TBA",
-      "startsAt": "2019-12-07T10:00:00",
-      "endsAt": "2019-12-07T10:50:00",
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        {"id": "06d32209-2a96-43f8-a6ac-5c549020d239", "name": "TBA TBA"}
-      ],
-      "categories": [
-        {"id": 16498, "name": "Track", "categoryItems": [], "sort": 1},
-        {"id": 16499, "name": "Session format", "categoryItems": [], "sort": 1000}
-      ],
-      "roomId": 10355,
-      "room": "Cloud"
-    },
-    {
-      "questionAnswers": [],
       "id": "155077",
       "title": "Technical SEO for Single Page Apps",
       "description":
@@ -221,6 +202,41 @@ final sessionsList = {
       ],
       "roomId": 10356,
       "room": "Web"
+    },
+    {
+      "questionAnswers": [],
+      "id": "164331",
+      "title": "Tranquility Base: Datacenter-as-Code with reusable components for your cloud",
+      "description":
+          "Here you will discover how creating your datacenter in software accelerates your cloud migration journey.\r\n\r\nWe will present Tranquility Base, the open-source consistent multi-cloud landing zone for Google Cloud Platform, Azure and Amazon Web Services.\r\nBuilt using modularised, versionable infrastructure as code templates including a self-service portal for automating the provisioning of a set of DevOps-ready reference architectures.\r\nSuch a platform allows you for quick fin-tech projects bootstrapping, making them production-ready, reducing entry risks, enabling easier migration to clouds.\r\n\r\nWe will explain:\r\n- the why? and the what?\r\n- how Tranquility Base works\r\n- how can you get involved",
+      "startsAt": "2019-12-07T10:00:00",
+      "endsAt": "2019-12-07T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        {"id": "71edb91f-314b-496a-832e-4185ea611bb5", "name": "Aleksander Madej"},
+        {"id": "03289b29-176b-42c8-a39a-a3dfbe0a4f11", "name": "Paweł Bolonek"}
+      ],
+      "categories": [
+        {
+          "id": 16498,
+          "name": "Track",
+          "categoryItems": [
+            {"id": 26784, "name": "Cloud"}
+          ],
+          "sort": 1
+        },
+        {
+          "id": 16499,
+          "name": "Session format",
+          "categoryItems": [
+            {"id": 26789, "name": "Long talk (50 min)"}
+          ],
+          "sort": 1000
+        }
+      ],
+      "roomId": 10355,
+      "room": "Cloud"
     },
     {
       "questionAnswers": [],
@@ -258,6 +274,39 @@ final sessionsList = {
     },
     {
       "questionAnswers": [],
+      "id": "164600",
+      "title": "Introducing Diversity to Android OS / HMS",
+      "description": "Get information about Huawei collection of libraries dedicated to Huawei devices.",
+      "startsAt": "2019-12-07T11:00:00",
+      "endsAt": "2019-12-07T11:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        {"id": "8081667d-c93c-4646-8144-c82718fc4b82", "name": "Michał Mokrzycki"}
+      ],
+      "categories": [
+        {
+          "id": 16498,
+          "name": "Track",
+          "categoryItems": [
+            {"id": 26785, "name": "Mobile"}
+          ],
+          "sort": 1
+        },
+        {
+          "id": 16499,
+          "name": "Session format",
+          "categoryItems": [
+            {"id": 26789, "name": "Long talk (50 min)"}
+          ],
+          "sort": 1000
+        }
+      ],
+      "roomId": 10355,
+      "room": "Cloud"
+    },
+    {
+      "questionAnswers": [],
       "id": "162660",
       "title": "Kanarek app - drastic changes under the hood in 2019",
       "description":
@@ -289,40 +338,6 @@ final sessionsList = {
       ],
       "roomId": 10357,
       "room": "Mobile"
-    },
-    {
-      "questionAnswers": [],
-      "id": "151200",
-      "title": "Training neural networks: A hacker's perspective",
-      "description":
-          "Despite the dauntless success of neural networks, the problem still remains - they can fail silently. This problem makes the job of debugging deep learning models very hard and being deep learning engineers/practitioners we often find ourselves in this situation. \r\n\r\nTo be able to approach the process of debugging deep learning models (and machine learning models as well) effectively, one needs a thorough understanding of the underlying principles that aid these models along with a set of practical guidelines. \r\n\r\nMy talk aims to shed light on two areas:\r\n- Training neural networks using a set of modern guidelines to adhere to the SoTA research practices\r\n- Debugging neural networks with an engineering and code-first mindset\r\n\r\nThroughout my talk, I will be sharing the tips and tricks I have accumulated from visionaries like Andrej Karpathy, Jeremy Howard along with my personal experiences. \r\n\r\nHere's a demo deck I had presented on this topic but I am also working on v2: http://bit.ly/2XwihXs\r\n\r\nI will be releasing a full-length article on this same topic as well. When it is out I will edit this proposal if needed :) The article is a part of a mini-series I am preparing with FloydHub. The series is based on structuring machine learning projects, aspects of handling, preparing data and deriving data-driven insights, debugging neural networks and much more. The first two articles in this series are published:\r\n- http://bit.ly/2XtMCeh\r\n- http://bit.ly/30N3bPA",
-      "startsAt": "2019-12-07T11:00:00",
-      "endsAt": "2019-12-07T11:30:00",
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        {"id": "43829f01-f979-48a4-9e05-eb794b92d64f", "name": "Sayak Paul"}
-      ],
-      "categories": [
-        {
-          "id": 16498,
-          "name": "Track",
-          "categoryItems": [
-            {"id": 26784, "name": "Cloud"}
-          ],
-          "sort": 1
-        },
-        {
-          "id": 16499,
-          "name": "Session format",
-          "categoryItems": [
-            {"id": 26787, "name": "Short talk (25 min)"}
-          ],
-          "sort": 1000
-        }
-      ],
-      "roomId": 10355,
-      "room": "Cloud"
     },
     {
       "questionAnswers": [],
@@ -391,40 +406,6 @@ final sessionsList = {
       ],
       "roomId": 10357,
       "room": "Mobile"
-    },
-    {
-      "questionAnswers": [],
-      "id": "160374",
-      "title": "What's going on in your microservices?",
-      "description":
-          "Our first steps to understand what's happening in our programs were 'printf' messages, then we learned to use IDE debuggers and global loggers. That were happy and easy times. Now, when microservices start to dominate simple methods starts to fail. Central store and visualize systems like ELK and hacks to debug apps in containers fall shy. It's time for new way.\r\n\r\nJaeger opensourced by Uber helps understand lifecycle of requests moving withing your distributed systems using opentracing standard. This talk will show how this cloud native solution can help you find problems within your systems and understand it's information structure and performance. ",
-      "startsAt": "2019-12-07T11:40:00",
-      "endsAt": "2019-12-07T12:10:00",
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        {"id": "1b84aa8c-be8f-4f0a-b866-ef71174f01ba", "name": "Piotr Trębacz"}
-      ],
-      "categories": [
-        {
-          "id": 16498,
-          "name": "Track",
-          "categoryItems": [
-            {"id": 26784, "name": "Cloud"}
-          ],
-          "sort": 1
-        },
-        {
-          "id": 16499,
-          "name": "Session format",
-          "categoryItems": [
-            {"id": 26787, "name": "Short talk (25 min)"}
-          ],
-          "sort": 1000
-        }
-      ],
-      "roomId": 10355,
-      "room": "Cloud"
     },
     {
       "questionAnswers": [],
@@ -821,19 +802,68 @@ final sessionsList = {
     },
     {
       "questionAnswers": [],
-      "id": "163679",
-      "title": "TBA",
-      "description": "TBA",
+      "id": "151200",
+      "title": "Training neural networks: A hacker's perspective",
+      "description":
+          "Despite the dauntless success of neural networks, the problem still remains - they can fail silently. This problem makes the job of debugging deep learning models very hard and being deep learning engineers/practitioners we often find ourselves in this situation. \r\n\r\nTo be able to approach the process of debugging deep learning models (and machine learning models as well) effectively, one needs a thorough understanding of the underlying principles that aid these models along with a set of practical guidelines. \r\n\r\nMy talk aims to shed light on two areas:\r\n- Training neural networks using a set of modern guidelines to adhere to the SoTA research practices\r\n- Debugging neural networks with an engineering and code-first mindset\r\n\r\nThroughout my talk, I will be sharing the tips and tricks I have accumulated from visionaries like Andrej Karpathy, Jeremy Howard along with my personal experiences. \r\n\r\nHere's a demo deck I had presented on this topic but I am also working on v2: http://bit.ly/2XwihXs\r\n\r\nI will be releasing a full-length article on this same topic as well. When it is out I will edit this proposal if needed :) The article is a part of a mini-series I am preparing with FloydHub. The series is based on structuring machine learning projects, aspects of handling, preparing data and deriving data-driven insights, debugging neural networks and much more. The first two articles in this series are published:\r\n- http://bit.ly/2XtMCeh\r\n- http://bit.ly/30N3bPA",
       "startsAt": "2019-12-07T16:00:00",
-      "endsAt": "2019-12-07T16:50:00",
+      "endsAt": "2019-12-07T16:30:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        {"id": "9dc00c69-96e1-4b57-9c36-8705488ee2e3", "name": "TBA TBA"}
+        {"id": "43829f01-f979-48a4-9e05-eb794b92d64f", "name": "Sayak Paul"}
       ],
       "categories": [
-        {"id": 16498, "name": "Track", "categoryItems": [], "sort": 1},
-        {"id": 16499, "name": "Session format", "categoryItems": [], "sort": 1000}
+        {
+          "id": 16498,
+          "name": "Track",
+          "categoryItems": [
+            {"id": 26784, "name": "Cloud"}
+          ],
+          "sort": 1
+        },
+        {
+          "id": 16499,
+          "name": "Session format",
+          "categoryItems": [
+            {"id": 26787, "name": "Short talk (25 min)"}
+          ],
+          "sort": 1000
+        }
+      ],
+      "roomId": 10355,
+      "room": "Cloud"
+    },
+    {
+      "questionAnswers": [],
+      "id": "160374",
+      "title": "What's going on in your microservices?",
+      "description":
+          "Our first steps to understand what's happening in our programs were 'printf' messages, then we learned to use IDE debuggers and global loggers. That were happy and easy times. Now, when microservices start to dominate simple methods starts to fail. Central store and visualize systems like ELK and hacks to debug apps in containers fall shy. It's time for new way.\r\n\r\nJaeger opensourced by Uber helps understand lifecycle of requests moving withing your distributed systems using opentracing standard. This talk will show how this cloud native solution can help you find problems within your systems and understand it's information structure and performance. ",
+      "startsAt": "2019-12-07T16:30:00",
+      "endsAt": "2019-12-07T16:55:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        {"id": "1b84aa8c-be8f-4f0a-b866-ef71174f01ba", "name": "Piotr Trębacz"}
+      ],
+      "categories": [
+        {
+          "id": 16498,
+          "name": "Track",
+          "categoryItems": [
+            {"id": 26784, "name": "Cloud"}
+          ],
+          "sort": 1
+        },
+        {
+          "id": 16499,
+          "name": "Session format",
+          "categoryItems": [
+            {"id": 26787, "name": "Short talk (25 min)"}
+          ],
+          "sort": 1000
+        }
       ],
       "roomId": 10355,
       "room": "Cloud"
@@ -972,6 +1002,39 @@ final sessionsList = {
       ],
       "roomId": 10356,
       "room": "Web"
+    },
+    {
+      "questionAnswers": [],
+      "id": "164344",
+      "title": "Thank you!",
+      "description": "It has been a truly fantastic event! See you next year!",
+      "startsAt": "2019-12-07T18:00:00",
+      "endsAt": "2019-12-07T18:15:00",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": [
+        {"id": "a22a5ea7-65c7-43df-980d-66c706003085", "name": "Jakub Kolakowski"}
+      ],
+      "categories": [
+        {
+          "id": 16498,
+          "name": "Track",
+          "categoryItems": [
+            {"id": 26784, "name": "Cloud"}
+          ],
+          "sort": 1
+        },
+        {
+          "id": 16499,
+          "name": "Session format",
+          "categoryItems": [
+            {"id": 26787, "name": "Short talk (25 min)"}
+          ],
+          "sort": 1000
+        }
+      ],
+      "roomId": 10355,
+      "room": "Cloud"
     },
     {
       "questionAnswers": [],

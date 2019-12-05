@@ -7,9 +7,9 @@ final speakersList = {
       "fullName": "Aleksander Madej",
       "bio":
           "Aleksander has spent the last ten years working as a technical leader. He brings solid programming skills ranging from Java, grid computing, microservices architecture, messaging, reactive programming and multithreading. He thrives in a diverse and multicultural environment and is especially interested in developing modern cloud solutions that are efficient, resilient and very easy to maintain.",
-      "tagLine": "Tech Lead at GFT, Cloud Engeener",
+      "tagLine": "Tech Lead at GFT, Cloud Engineer",
       "profilePicture":
-          "https://sessionize.com/image?f=26a727f8254ca2b4887065f1423ff002,400,400,1,0,9912b80a-f542-4a45-999c-e116ae40f414.jpg",
+          "https://sessionize.com/image?f=2f9b0bcbff5c259ccc962784655584ea,400,400,1,0,a7-65c7-43df-980d-66c706003085.e2d1fb78-0d49-43f8-969c-d282c6580ca4.jpg",
       "sessions": [
         {"id": 164331, "name": "Tranquility Base: Datacenter-as-Code with reusable components for your cloud"}
       ],
@@ -399,6 +399,24 @@ final speakersList = {
       "categories": []
     },
     {
+      "id": "8081667d-c93c-4646-8144-c82718fc4b82",
+      "firstName": "Michał",
+      "lastName": "Mokrzycki",
+      "fullName": "Michał Mokrzycki",
+      "bio":
+          "I am Android developer since 2012. I joined to many hackathons and won some prizes. From to time I tutor students how to code in Android.",
+      "tagLine": "Developer Technical Support Egineer In Huawei R&D CBG Polska",
+      "profilePicture":
+          "https://sessionize.com/image?f=4e0ecdc39ec5c81416595ba702dc8f09,400,400,1,0,7d-c93c-4646-8144-c82718fc4b82.581851be-0cb3-4bdf-bfa7-795e6f022ffe.jpg",
+      "sessions": [
+        {"id": 164600, "name": "Introducing Diversity to Android OS / HMS"}
+      ],
+      "isTopSpeaker": false,
+      "links": [],
+      "questionAnswers": [],
+      "categories": []
+    },
+    {
       "id": "78bc9a6c-27b9-4f93-ae61-38b7accbd757",
       "firstName": "Michał",
       "lastName": "Tajchert",
@@ -428,6 +446,24 @@ final speakersList = {
           "https://sessionize.com/image?f=9ede67e52a5e1e0136853e85eae25c91,400,400,1,0,91-2c47-4cde-a1f9-07aa7a8e7415.ca071005-868a-4394-869e-6bd199f191b1.jpg",
       "sessions": [
         {"id": 159067, "name": "Android Jetpack - what you need to know in 2019"}
+      ],
+      "isTopSpeaker": false,
+      "links": [],
+      "questionAnswers": [],
+      "categories": []
+    },
+    {
+      "id": "03289b29-176b-42c8-a39a-a3dfbe0a4f11",
+      "firstName": "Paweł",
+      "lastName": "Bolonek",
+      "fullName": "Paweł Bolonek",
+      "bio":
+          "Paweł started career as Infrastructure Administrator moved to Development based on JVM ecosystem. Today he's leveraging whole experience in Cloud world. ",
+      "tagLine": "Solution Architect",
+      "profilePicture":
+          "https://sessionize.com/image?f=1c7cb23e989da569478a1ba885a4d019,400,400,1,0,29-176b-42c8-a39a-a3dfbe0a4f11.0a8ddeec-6c76-4239-9440-919ff56256a4.jpg",
+      "sessions": [
+        {"id": 164331, "name": "Tranquility Base: Datacenter-as-Code with reusable components for your cloud"}
       ],
       "isTopSpeaker": false,
       "links": [],
@@ -599,22 +635,6 @@ final speakersList = {
         {"id": 162834, "name": "Summary of the GDG Radzymin activities & plans for 2020."},
         {"id": 162838, "name": "Become a Mobile App Developer in 2020 🎉 (Radzymin)"},
         {"id": 162836, "name": "Closing DevFest in Radzymin"}
-      ],
-      "isTopSpeaker": false,
-      "links": [],
-      "questionAnswers": [],
-      "categories": []
-    },
-    {
-      "id": "9dc00c69-96e1-4b57-9c36-8705488ee2e3",
-      "firstName": "TBA",
-      "lastName": "TBA",
-      "fullName": "TBA TBA",
-      "bio": "TBA",
-      "tagLine": "TBA",
-      "profilePicture": null,
-      "sessions": [
-        {"id": 163679, "name": "TBA"}
       ],
       "isTopSpeaker": false,
       "links": [],

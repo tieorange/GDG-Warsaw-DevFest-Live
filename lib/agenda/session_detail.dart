@@ -65,40 +65,42 @@ class SessionDetail extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(18.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Text(
-                "${session.track}",
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.title.copyWith(
-                      fontSize: 18,
-                      color: Tools.multiColors[Random().nextInt(4)],
-                    ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "${session.sessionTitle}",
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.title.copyWith(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                session.sessionDesc,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.caption.copyWith(fontSize: 18),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-            ],
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text(
+                  "${session.track}",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.title.copyWith(
+                        fontSize: 18,
+                        color: Tools.multiColors[Random().nextInt(4)],
+                      ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "${session.sessionTitle}",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.title.copyWith(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  session.sessionDesc,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.caption.copyWith(fontSize: 18),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+              ],
+            ),
           ),
         ),
       ),
